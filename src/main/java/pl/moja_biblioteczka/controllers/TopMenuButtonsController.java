@@ -6,6 +6,7 @@ import javafx.scene.control.ToggleGroup;
 
 public class TopMenuButtonsController {
 
+    public static final String ADD_BOOK_FXML = "/fxml/AddBook.fxml";
     private MainController mainController;
     @FXML
     private ToggleGroup toggleButtons;
@@ -30,6 +31,7 @@ public class TopMenuButtonsController {
         if (toggleButtons.getSelectedToggle() != null){
             toggleButtons.getSelectedToggle().setSelected(false);
         }
+        this.mainController.setCenter(ADD_BOOK_FXML);
     }
 
 }
